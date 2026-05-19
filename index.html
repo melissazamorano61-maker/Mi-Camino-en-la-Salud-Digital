@@ -1,0 +1,401 @@
+<section id="formacion-ibme" class="section-ibme">
+
+<style>
+/* ============================= */
+/* 🔥 ANIMACIONES FUTURISTAS 🔥 */
+/* ============================= */
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes neonGlow {
+  0% { box-shadow: 0 0 10px rgba(0,255,255,0.15); }
+  50% { box-shadow: 0 0 25px rgba(0,255,255,0.45); }
+  100% { box-shadow: 0 0 10px rgba(0,255,255,0.15); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-25px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes titleGlow {
+  0% { text-shadow: 0 0 10px rgba(0,255,255,0.4); }
+  50% { text-shadow: 0 0 25px rgba(0,255,255,1); }
+  100% { text-shadow: 0 0 10px rgba(0,255,255,0.4); }
+}
+
+@keyframes subtitlePulse {
+  0% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+  100% { opacity: 0.85; transform: scale(1); }
+}
+
+@keyframes textFloat {
+  0% { transform: translateY(0px); opacity: 0.95; }
+  50% { transform: translateY(-4px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0.95; }
+}
+
+/* ============================= */
+/* 🔥 ESTILOS BASE */
+/* ============================= */
+
+.section-ibme {
+  font-family: system-ui, sans-serif;
+  color: #e5f4ff;
+  background: radial-gradient(circle at top left, #04101f 0, #020712 45%, #000000 100%);
+  padding: 3rem 1.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 255, 255, 0.18);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.12);
+}
+
+.section-ibme p {
+  animation: textFloat 6s ease-in-out infinite;
+}
+
+/* ============================= */
+/* 🔥 IMÁGENES PRINCIPALES */
+/* ============================= */
+
+.ibme-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.img-ibme {
+  width: 260px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,255,255,0.35);
+  animation: float 4s ease-in-out infinite, neonGlow 6s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.img-ibme:hover { transform: scale(1.07); }
+
+.img-evy {
+  width: 220px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,255,255,0.35);
+  animation: float 5s ease-in-out infinite, neonGlow 7s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.img-evy:hover { transform: scale(1.07); }
+
+/* ============================= */
+/* 🔵 SELLO ACREDITACIÓN NUEVA */
+/* ============================= */
+
+.acreditacion-badge {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.img-acreditacion {
+  width: 180px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,255,255,0.35);
+  box-shadow: 0 0 25px rgba(0,255,255,0.25);
+  animation: float 4s ease-in-out infinite, neonGlow 6s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.img-acreditacion:hover { transform: scale(1.08); }
+
+/* ============================= */
+/* 🔥 TITULOS SUPER DESTACADOS */
+/* ============================= */
+
+.ibme-semestre h3,
+.dual-card h3,
+.aporte h3,
+.impacto h3,
+.tens-diferencia h3 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #7be9ff;
+  text-shadow: 0 0 12px rgba(0,255,255,0.7), 0 0 22px rgba(0,255,255,0.4);
+  letter-spacing: 0.08em;
+  border-left: 5px solid #00eaff;
+  padding-left: 0.8rem;
+  margin-bottom: 0.9rem;
+  animation: titleGlow 3s ease-in-out infinite, slideIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+/* 🔥 SUBTÍTULOS VIVOS */
+.ibme-semestre h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #baf7ff;
+  text-shadow: 0 0 10px rgba(0,255,255,0.45);
+  letter-spacing: 0.04em;
+  animation: subtitlePulse 4s ease-in-out infinite, fadeUp 1.4s ease forwards;
+  opacity: 0;
+}
+
+/* ============================= */
+/* 🔥 BLOQUES PREMIUM */
+/* ============================= */
+
+.valor-pro,
+.dual-card,
+.aporte,
+.impacto,
+.tens-diferencia,
+.acreditacion-badge {
+  background: rgba(0, 255, 255, 0.06);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  padding: 1.5rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  animation: fadeUp 1.2s ease forwards, neonGlow 7s ease-in-out infinite;
+  opacity: 0;
+}
+
+.dual-career {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ============================= */
+/* 🔥 SEMESTRES */
+/* ============================= */
+
+.ibme-semestre {
+  animation: fadeUp 1.2s ease forwards;
+  opacity: 0;
+  animation-delay: 1.4s;
+  border-bottom: 1px dashed rgba(0, 224, 255, 0.18);
+  padding-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.ibme-semestre:hover {
+  transform: scale(1.01);
+  transition: 0.3s ease;
+  border-color: rgba(0,255,255,0.45);
+}
+
+/* ============================= */
+/* 🔥 RESPONSIVE */
+/* ============================= */
+
+@media (min-width: 900px) {
+  .dual-career { flex-direction: row; }
+  .ibme-header { flex-direction: row; }
+}
+</style>
+
+<!-- ============================= -->
+<!-- 🔵 CONTENIDO PRINCIPAL -->
+<!-- ============================= -->
+
+<div class="ibme-header">
+  <img class="img-ibme" src="informatica-biomedica.png" alt="Informática Biomédica">
+  <img class="img-evy" src="foto-evy.png" alt="Foto profesional Evy">
+</div>
+
+<div class="acreditacion-badge">
+  <img class="img-acreditacion" src="acreditacion-nueva.png" alt="Acreditación en Salud">
+</div>
+
+<div class="valor-pro">
+  <h3>⭐ Mi Propuesta de Valor Profesional</h3>
+  <p>
+    Soy una profesional clínico‑digital con 16 años de experiencia asistencial como TENS y formación avanzada en Informática Biomédica. 
+    Integro criterio clínico real con competencias digitales para mejorar HIS, optimizar flujos asistenciales y asegurar la calidad del dato.
+  </p>
+</div>
+
+<div class="dual-career">
+  <div class="dual-card">
+    <h3>🩺 Técnico Superior de Enfermería</h3>
+    <p>16 años de experiencia clínica en UCI, UTI, UPC, urgencias y neurorrehabilitación.</p>
+  </div>
+
+  <div class="dual-card">
+    <h3>💻 Tecnóloga en Informática Biomédica</h3>
+    <p>Especialista en HIS, interoperabilidad, HL7, FHIR, CIE‑11,SNOMED.CT y QA funcional.</p>
+  </div>
+</div>
+
+<div class="aporte">
+  <h3>🚀 Lo que aporto a un hospital o proyecto TI</h3>
+  <ul>
+    <li>Criterio clínico para validar HIS.</li>
+    <li>Experiencia real en áreas críticas.</li>
+    <li>Traducción de necesidades clínicas a requerimientos técnicos.</li>
+    <li>Interoperabilidad: HL7, FHIR, CIE‑11, SNOMED.CT </li>
+    <li>SQL + análisis de datos.</li>
+    <li>Capacitación efectiva a usuarios.</li>
+  </ul>
+</div>
+
+<div class="impacto">
+  <h3>📊 Impacto Real en Salud Digital</h3>
+  <ul>
+    <li>Reducción del 20–30% en tiempos de resolución en TrakCare.</li>
+    <li>0 interrupciones críticas durante implementaciones HIS.</li>
+    <li>Optimización de listas de espera FONASA.</li>
+    <li>Validación de flujos clínicos.</li>
+  </ul>
+</div>
+
+<div class="tens-diferencia">
+  <h3>🩺 Por qué mi experiencia TENS me hace diferente</h3>
+  <p>
+    Comprendo cómo se vive la atención en terreno, anticipo riesgos y valido flujos con criterio clínico real.
+  </p>
+</div>
+
+<!-- ============================= -->
+<!-- 🔵 ASIGNATURAS COMPLETAS (ACTUALIZADAS) -->
+<!-- ============================= -->
+
+<div class="ibme-semestre">
+  <h3>1° Semestre-Fundamentos del Entorno Sanitario</h3>
+
+  <h4>Ecosistema Sanitario</h4>
+  <p>Funcionamiento del sistema de salud chileno, sus actores, niveles de atención y flujos asistenciales.</p>
+
+  <h4>Terminología Clínica</h4>
+  <p>Lenguaje médico esencial para interpretar registros, diagnósticos y documentación clínica.</p>
+
+  <h4>Soporte de Software</h4>
+  <p>Instalación, configuración y resolución de incidencias básicas en sistemas informáticos de salud.</p>
+
+  <h4>Modelos Sanitarios</h4>
+  <p>Estudio de modelos de atención y su impacto en la gestión clínica y administrativa.</p>
+</div>
+
+<div class="ibme-semestre">
+  <h3>2° Semestre — Sistemas y Codificación Clínica</h3>
+
+  <h4>Sistema de Información en Salud</h4>
+  <p>Introducción a HIS, RIS, LIS y plataformas que soportan la operación clínica.</p>
+
+  <h4>Codificación Clínica</h4>
+  <p>Uso de CIE‑10, CIE‑11, SNOMED, HL7 y FHIR para estructurar, clasificar e interoperar diagnósticos y procedimientos clínicos.</p>
+</div>
+
+<div class="ibme-semestre">
+  <h3>3° Semestre — Ingeniería y Requerimientos</h3>
+
+  <h4>Calidad en Salud</h4>
+  <p>Normativas de acreditación, seguridad del paciente y estándares de calidad asistencial.</p>
+
+  <h4>Diseño y Gestión de Requisitos</h4>
+  <p>Levantamiento, análisis y documentación de requerimientos para proyectos TI en salud.</p>
+
+  <h4>Diseño de Prototipos</h4>
+  <p>Creación de wireframes y prototipos funcionales para validar soluciones digitales.</p>
+
+  <h4>Ingeniería de Software</h4>
+  <p>Metodologías ágiles y ciclo de vida del desarrollo aplicados a proyectos clínicos.</p>
+</div>
+
+<div class="ibme-semestre">
+  <h3>4° Semestre — Inteligencia de Negocios</h3>
+
+  <h4>Procesos de Negocios</h4>
+  <p>Modelamiento de procesos mediante BPMN para optimizar flujos clínicos y administrativos.</p>
+
+  <h4>Inteligencia de Negocios</h4>
+  <p>Diseño de dashboards, KPIs y análisis para la toma de decisiones en salud utilizando Power BI.</p>
+
+  <h4>Minería de Datos</h4>
+  <p>Clasificación y predicción aplicadas a datos clínicos utilizando Power BI, Excel avanzado, RStudio básico y Python introductorio.</p>
+
+  <h4>Portafolio de Título</h4>
+  <p>Desarrollo de un proyecto aplicado que integra competencias técnicas y clínicas.</p>
+</div>
+
+<div class="ibme-semestre">
+  <h3>5° Semestre — Bases de Datos y Big Data</h3>
+
+  <h4>Introducción a la Informática</h4>
+  <p>Fundamentos de hardware, redes y arquitectura computacional.</p>
+
+  <h4>Modelamiento de BD</h4>
+  <p>Diseño conceptual y lógico de bases de datos clínicas mediante diagramas entidad‑relación.</p>
+
+  <h4>Consultas SQL</h4>
+  <p>Extracción, filtrado y análisis de datos utilizando PostgreSQL, SQL Server y DBeaver.</p>
+
+  <h4>Programación de BD</h4>
+  <p>Desarrollo de funciones, triggers y automatizaciones en PostgreSQL y SQL Server para mejorar la integridad del dato clínico.</p>
+
+  <h4>Práctica Laboral</h4>
+  <p>Experiencia real en entornos clínicos o TI aplicando conocimientos adquiridos.</p>
+
+  <h4>Big Data</h4>
+  <p>Procesamiento de grandes volúmenes de datos clínicos utilizando Hadoop, Spark, Python y bases NoSQL como MongoDB.</p>
+</div>
+
+<div class="ibme-semestre">
+  <h3>6° Semestre — Gestión de Información Biomédica</h3>
+
+  <h4>Nivelación Matemáticas</h4>
+  <p>Refuerzo de conceptos matemáticos y estadísticos esenciales.</p>
+
+  <h4>Herramientas de Análisis</h4>
+  <p>Uso avanzado de Excel y Power Query para análisis clínico y operativo.</p>
+
+  <h4>Bioestadística y Epidemiología</h4>
+  <p>Cálculo e interpretación de indicadores sanitarios y estudios epidemiológicos utilizando RStudio y Excel.</p>
+
+  <h4>Mentalidad Emprendedora</h4>
+  <p>Desarrollo de pensamiento innovador orientado a soluciones en salud.</p>
+
+  <h4>Innovación en Servicios</h4>
+  <p>Diseño y validación de mejoras en servicios clínicos y digitales mediante metodologías de innovación.</p>
+</div>
+
+<div class="ibme-semestre">
+  <h3>7° Semestre — Gestión de Proyectos</h3>
+
+  <h4>Bioseguridad</h4>
+  <p>Normativas y prácticas para garantizar seguridad clínica y prevención de riesgos.</p>
+
+  <h4>Planilla Avanzada</h4>
+  <p>Automatización y análisis avanzado mediante Excel y macros básicas.</p>
+
+  <h4>Reportes Biomédicos</h4>
+  <p>Elaboración de informes clínicos y operativos basados en datos utilizando Power BI y Excel.</p>
+
+  <h4>Gestión de Proyectos I</h4>
+  <p>Planificación y estructuración de proyectos TI en salud utilizando MS Project y metodologías ágiles.</p>
+
+  <h4>Gestión de Proyectos II</h4>
+  <p>Ejecución, control y cierre de proyectos con enfoque profesional utilizando Jira y MS Project.</p>
+</div>
+
+<div class="ibme-semestre">
+  <h3>8° Semestre — Integración Profesional</h3>
+
+  <h4>Práctica Profesional</h4>
+  <p>Aplicación integral de competencias en un entorno real de salud digital.</p>
+
+  <h4>Portafolio</h4>
+  <p>Compilación de evidencias profesionales y logros académicos.</p>
+</div>
+
+</section>
